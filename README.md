@@ -39,3 +39,5 @@ KEY = \begin{bmatrix}
 \end{bmatrix}
 
 ```
+
+now in comparason the key size here is 3x3 or 9 bits, kyber-lcb-8192 is a 8192 bit encryption algorithm meaning the key size will be 
