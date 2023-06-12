@@ -112,7 +112,6 @@ if __name__ == '__main__':
     SAMPLE_SIZE = 20
     KEY = gen_key()
 
-
     print(f'This may take a while (sampling {SAMPLE_SIZE}, in intervals of {len(RAN)})...')
 
     for x in range(SAMPLE_SIZE):
