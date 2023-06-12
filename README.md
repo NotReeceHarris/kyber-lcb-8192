@@ -1,10 +1,10 @@
-# kyber-lcb-8192
+# kyber-lcb-8281
 
 <img src="assets/snowflake_2744-fe0f_padding.gif" align="right" height="240" width="290"/>
 
 ![License](https://img.shields.io/github/license/NotReeceHarris/kyber-lcb)
 
-**kyber-lcb-8192** is a hybrid encryption algorithm that implements the [Kyber](https://pq-crystals.org/kyber/) key encapsulation mechanism (KEM) and an 8192-bit matrix encryption algorithm.
+**kyber-lcb-8281** is a hybrid encryption algorithm that implements the [Kyber](https://pq-crystals.org/kyber/) key encapsulation mechanism (KEM) and an 8281-bit matrix encryption algorithm.
 
 Kyber security is based on the hardness of solving the learning-with-errors (LWE) problem over module lattices. Kyber is one of the candidate algorithms submitted to the [NIST post-quantum cryptography project](https://csrc.nist.gov/Projects/Post-Quantum-Cryptography).
 
@@ -40,4 +40,4 @@ KEY = \begin{bmatrix}
 
 ```
 
-now in comparason the key size here is 3x3 or 9 bits, kyber-lcb-8192 is a 8192 bit encryption algorithm meaning the key size will be 
+now in comparason the key size here is 3x3 or 9 bits, kyber-lcb-8281 is a 8281 bit encryption algorithm meaning the key size will be 91x91 
