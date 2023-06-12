@@ -2,7 +2,9 @@
 
 <img src="assets/snowflake_2744-fe0f_padding.gif" align="right" height="240" width="290"/>
 
-![License](https://img.shields.io/github/license/NotReeceHarris/kyber-lcb)
+![License](https://img.shields.io/github/license/NotReeceHarris/kyber-lcb?style=flat-square)
+![GitHub issues](https://img.shields.io/github/issues/NotReeceHarris/kyber-lcb-8281?style=flat-square)
+![GitHub pull requests](https://img.shields.io/github/issues-pr/NotReeceHarris/kyber-lcb-8281?style=flat-square)
 
 **kyber-lcb-8281** is a hybrid encryption algorithm that implements the [Kyber](https://pq-crystals.org/kyber/) key encapsulation mechanism (KEM) and an 8281-bit matrix encryption algorithm.
 
@@ -14,6 +16,8 @@ Please be aware that the encryption algorithm implemented in this repository sho
 Furthermore, it is essential to note that the Kyber Key Encapsulation Mechanism (KEM) employed in this implementation has yet to be tested or utilized in conjunction with matrix encryption. This lack of prior usage may introduce unforeseen vulnerabilities, compromising the security and reliability of the encryption process.
 
 **I cannot accept responsibility for any data breaches that may occur due to using this algorithm.**
+
+<!--
 
 ## What is matrix encryption
 
@@ -27,9 +31,9 @@ a | b | c | d | e | f | g | h | i | j | k | l | m | n | o | p | q | r | s | t | 
 ```math
 
 KEY = \begin{bmatrix}
-1 & 2 & 3 \\
-4 & 5 & 6 \\
-7 & 8 & 9
+1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 \\
+10 & 11 & 12 & 13 & 14 & 15 & 16 & 17 & 18 \\
+19 & 20 & 21 & 22 & 23 & 24 & 25 & 26 & 27
 \end{bmatrix}
 .
 \begin{bmatrix}
@@ -40,4 +44,6 @@ KEY = \begin{bmatrix}
 
 ```
 
-now in comparason the key size here is 3x3 or 9 bits, kyber-lcb-8281 is a 8281 bit encryption algorithm meaning the key size will be 91x91 
+now in comparason the key size here is 3x3 or 9 bits, kyber-lcb-8281 is a 8281 bit encryption algorithm meaning the key size will be 91x91, now this would be useless if we had a 15 character sentence to encode and ≈ 8267 free blank spaces so this is where random data comes in. filling the remaining spaces with random data will make it impossible to decipher whats real and fake
+
+-->
