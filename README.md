@@ -1,12 +1,12 @@
-# kyber-lcb-8281
+# kyber-lcb-9409
 
 <img src="assets/snowflake_2744-fe0f_padding.gif" align="right" height="240" width="290"/>
 
-![License](https://img.shields.io/github/license/NotReeceHarris/kyber-lcb?style=flat-square)
-![GitHub issues](https://img.shields.io/github/issues/NotReeceHarris/kyber-lcb-8281?style=flat-square)
-![GitHub pull requests](https://img.shields.io/github/issues-pr/NotReeceHarris/kyber-lcb-8281?style=flat-square)
+![License](https://img.shields.io/github/license/NotReeceHarris/kyber-lcb-9409?style=flat-square)
+![GitHub issues](https://img.shields.io/github/issues/NotReeceHarris/kyber-lcb-9409?style=flat-square)
+![GitHub pull requests](https://img.shields.io/github/issues-pr/NotReeceHarris/kyber-lcb-9409?style=flat-square)
 
-**kyber-lcb-8281** is a hybrid encryption algorithm that implements the [Kyber](https://pq-crystals.org/kyber/) key encapsulation mechanism (KEM) and an 8281-bit matrix encryption algorithm.
+**kyber-lcb-9409** is a hybrid encryption algorithm that implements the [Kyber](https://pq-crystals.org/kyber/) key encapsulation mechanism (KEM) and an 9409-bit matrix encryption algorithm.
 
 Kyber security is based on the hardness of solving the learning-with-errors (LWE) problem over module lattices. Kyber is one of the candidate algorithms submitted to the [NIST post-quantum cryptography project](https://csrc.nist.gov/Projects/Post-Quantum-Cryptography).
 
@@ -20,13 +20,6 @@ Furthermore, it is essential to note that the Kyber Key Encapsulation Mechanism 
 <!--
 
 ## What is matrix encryption
-
-THE PLAN IS READY
-
-a | b | c | d | e | f | g | h | i | j | k | l | m | n | o | p | q | r | s | t | u | v | w | x | y | z
---- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | ---
-0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 | 19 | 20 | 21 | 22 | 23 | 24 | 25
-
 
 ```math
 
@@ -43,7 +36,4 @@ KEY = \begin{bmatrix}
 \end{bmatrix}
 
 ```
-
-now in comparason the key size here is 3x3 or 9 bits, kyber-lcb-8281 is a 8281 bit encryption algorithm meaning the key size will be 91x91, now this would be useless if we had a 15 character sentence to encode and ≈ 8267 free blank spaces so this is where random data comes in. filling the remaining spaces with random data will make it impossible to decipher whats real and fake
-
 -->
