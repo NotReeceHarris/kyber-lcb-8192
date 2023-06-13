@@ -1,6 +1,6 @@
 # lcb-9409
 
-<img src="assets/snowflake_2744-fe0f_padding.gif" align="right" height="240" width="290"/>
+<!-- <img src="assets/snowflake_2744-fe0f_padding.gif" align="right" height="240" width="290"/> -->
 
 ![License](https://img.shields.io/github/license/NotReeceHarris/lcb-9409?style=flat-square)
 ![GitHub issues](https://img.shields.io/github/issues/NotReeceHarris/lcb-9409?style=flat-square)
