@@ -2,8 +2,6 @@ import numpy as np
 import ast
 import base64
 
-import matplotlib.pyplot as plt
-import time
 import secrets
 import string
 
@@ -52,7 +50,7 @@ def gen_key(SIZE=97):
 
 def encrypt(k, b, SIZE=97):
     """
-    :param key: the generated key for kyber-lcb-9409
+    :param key: the generated key for lcb-9409
     :param body: the content to be encrypted
     :return: a nested array of numbers
     """
@@ -83,7 +81,7 @@ def encrypt(k, b, SIZE=97):
     
 def decrypt(k, arr, SIZE=97):
     """
-    :param k: the generated key for kyber-lcb-9409
+    :param k: the generated key for lcb-9409
     :param array: an array of nested arrays provided from encrypt()
     :return: the decrypted content
     """
@@ -104,30 +102,3 @@ def decrypt(k, arr, SIZE=97):
     b = base64.b64decode(e).decode("utf-8")
 
     return b
-
-if __name__ == '__main__':
-
-    RAN = generate_random_character(10)
-    CONTENT =  'Hello, World!'
-    SAMPLE_SIZE = 20
-    KEY = gen_key()
-
-    print(f'This may take a while (sampling {SAMPLE_SIZE}, in intervals of {len(RAN)})...')
-
-    for x in range(SAMPLE_SIZE):
-        CONTENT += RAN
-        KEY = gen_key()
-        
-        start = time.process_time()
-        ENCRYPTED = encrypt(KEY, CONTENT)
-        DECRYPTED = decrypt(KEY, ENCRYPTED)
-        end = time.process_time()
-
-        plt.scatter(len(CONTENT), (end - start), color = 'green' if CONTENT == DECRYPTED else 'red')
-
-    print('Done! please inspect graph.')
-
-    plt.title('Time compared to size')
-    plt.xlabel(f'Content length (interval of {len(RAN)})')
-    plt.ylabel('Time taken (ms)')
-    plt.show()
