@@ -17,23 +17,90 @@ Furthermore, it is essential to note that the Kyber Key Encapsulation Mechanism 
 
 **I cannot accept responsibility for any data breaches that may occur due to using this algorithm.**
 
-<!--
-
 ## What is matrix encryption
 
-```math
+Matrix encryption is a sophisticated cryptographic technique used to secure data by transforming it into an unintelligible form. It employs matrices, which are mathematical structures consisting of rows and columns, to encode information. The process begins by dividing the data into manageable blocks. Each block is then represented as a matrix, with the elements of the matrix corresponding to the numerical values of the data.
 
+To encrypt the data, a specially designed matrix known as the encryption key is utilized. This encryption key matrix contains a predefined set of values that determine the encryption algorithm. The encryption process involves multiplying the data matrix by the encryption key matrix, using matrix multiplication rules. This operation scrambles the data by altering its numerical representation in a way that is computationally difficult to reverse-engineer without access to the encryption key.
+
+To decrypt the encrypted data and retrieve the original information, the recipient must possess the decryption key, which is the inverse of the encryption key matrix. By multiplying the encrypted matrix with the decryption key matrix, the original data matrix is obtained, thereby recovering the plaintext. The encryption and decryption keys are carefully generated and kept confidential to ensure the security of the encoded information.
+
+
+### Encryption
+
+```math
 KEY = \begin{bmatrix}
-1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 \\
-10 & 11 & 12 & 13 & 14 & 15 & 16 & 17 & 18 \\
-19 & 20 & 21 & 22 & 23 & 24 & 25 & 26 & 27
+6 & 5 & 2 \\
+4 & 4 & 5 \\
+1 & 8 & 4
 \end{bmatrix}
-.
+
+\\
+
+CONTENT = \begin{bmatrix}
+19 & 15 & 13 & 17 & 3\\
+7 & 11 & 8 & 4 & 24\\
+4 & 0 & 18 & 0 & 26
+\end{bmatrix}
+```
+
+---
+
+```math
+\begin{bmatrix}
+6 & 5 & 2 \\
+4 & 4 & 5 \\
+1 & 8 & 4
+\end{bmatrix}
+*
 \begin{bmatrix}
 19 & 15 & 13 & 17 & 3\\
 7 & 11 & 8 & 4 & 24\\
 4 & 0 & 18 & 0 & 26
 \end{bmatrix}
-
+=
+\begin{bmatrix}
+45 & 37 & 83 & 25 & 129\\
+135 & 115 & 200 & 88 & 288\\
+225 & 193 & 317 & 151 & 447
+\end{bmatrix}
 ```
--->
+
+
+### Decryption
+
+```math
+inv\begin{bmatrix}
+6 & 5 & 2 \\
+4 & 4 & 5 \\
+1 & 8 & 4
+\end{bmatrix}
+=
+\begin{bmatrix}
+0.167 & 0.027 & -0.118 \\
+0.076 & -0.153 & 0.153 \\
+-0.195 & 0.300 & -0.027
+\end{bmatrix}
+```
+
+---
+
+```math
+\begin{bmatrix}
+0.167 & 0.027 & -0.118 \\
+0.076 & -0.153 & 0.153 \\
+-0.195 & 0.300 & -0.027
+\end{bmatrix}
+*
+\begin{bmatrix}
+45 & 37 & 83 & 25 & 129\\
+135 & 115 & 200 & 88 & 288\\
+225 & 193 & 317 & 151 & 447
+\end{bmatrix}
+=
+\begin{bmatrix}
+19 & 15 & 13 & 17 & 3\\
+7 & 11 & 8 & 4 & 24\\
+4 & 0 & 18 & 0 & 26
+\end{bmatrix}
+```
